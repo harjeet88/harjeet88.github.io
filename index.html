@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harjeet Kumar Rajpal - CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-zR2sul2oRHkLHvmaoAbwBVBqtkLMxfiTZX7whkCD4kZvTV6tg4Qh4waP2+yYqZ0q7lKYZ9gJM0Gsv3cIIC2R18hlxA==" crossorigin="anonymous"/>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
+      margin: 20px;
+      line-height: 1.6;
     }
     h1, h2, h3 {
-      margin: 10px 0;
+      margin-bottom: 10px;
     }
     .contact-info {
       display: flex;
@@ -21,26 +22,25 @@
     .contact-info span {
       margin-right: 10px;
     }
-    .profile {
+    .section {
       margin-bottom: 20px;
     }
-    .experience {
-      margin-bottom: 20px;
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-    .experience h3 {
+    .experience-item {
+      margin-bottom: 15px;
+    }
+    .experience-item h4 {
       margin-bottom: 5px;
     }
-    .experience .technologies {
-      font-style: italic;
-    }
-    .achievements, .skills, .education, .certifications {
-      margin-bottom: 20px;
-    }
-    .achievements, .skills, .education, .certifications ul {
-      list-style: none;
+    .skills-list, .achievements-list {
+      margin: 0;
       padding: 0;
+      list-style: none;
     }
-    .achievements, .skills, .education, .certifications li {
+    .skills-list li, .achievements-list li {
       margin-bottom: 5px;
     }
   </style>
@@ -48,68 +48,50 @@
 <body>
   <h1>Harjeet Kumar Rajpal</h1>
   <div class="contact-info">
-    <span>+91 92430 24759</span>
-    <span>harjeet.kumar88@gmail.com</span>
+    <span><i class="fa-solid fa-phone"></i> +91 92430 24759</span>
+    <span><i class="fa-solid fa-envelope"></i> harjeet.kumar88@gmail.com</span>
   </div>
 
   <h2>Profile</h2>
   <p>Accomplished Head of Engineering of Data and Forecasting with a proven track record of transforming business processes through data analytics and innovative strategies. Seeking a Director position in Data Science and Engineering space in Bangalore to leverage expertise in driving operational excellence, optimizing supply chain efficiency, and leading cross-functional teams to success.</p>
 
-  <ul>
-    <li>Specializing in bootstrapping ML and Big Data Teams and Initiatives. Executed for Morgan Stanley , Tesco and Sapient.</li>
-    </ul>
-
   <h2>Technical Skills</h2>
-  <h3>Programming Languages</h3>
-  <ul>
-    <li>Java</li>
-    <li>Scala</li>
-    <li>Python</li>
+  <ul class="skills-list">
+    <li>Programming Languages: Java, Scala, Python</li>
+    <li>NoSQL Database: HBase, Cassandra, DynamoDB</li>
+    <li>Big Data Technologies: Spark, Hadoop, MapReduce, Hive, Pig, Oozie, Yarn, HDFS</li>
+    <li>Data Ingestion Systems: Kafka, Flume, Sqoop</li>
+    <li>Messaging and Event Driven: Kafka</li>
+    <li>Streaming: Spark Streaming, Structured Streaming</li>
   </ul>
 
-  <h3>NoSQL Database</h3>
-  <ul>
-    <li>HBase</li>
-    <li>Explored - Cassandra, DynamoDB</li>
+  <h2>Experience</h2>
+  <div class="experience-item">
+    <h4>Head of Forecasting and Data, Tesco, India (Jan 2023 - Present)</h4>
+    <ul>
+      <li>Led a 70+ member team to build a state-of-the-art forecasting platform.</li>
+      <li>Managed a £5M/year budget and delivered £150M+ in value.</li>
+      <li>Collaborated with product and business teams to define and execute strategies.</li>
+      <li>Leveraged technologies like Spark, Spark Streaming, HBase, Hive, HDFS, and Oozie.</li>
+    </ul>
+  </div>
+
+  <h2>Achievements</h2>
+  <ul class="achievements-list">
+    <li>Received Annual Award for Forecast Revolution delivering High Impact Project.</li>
+    <li>Received Award and Recognition for Managing Tough stakeholders.</li>
+    <li>Received Award for Innovation in Morgan Stanley.</li>
+    <li>Delivered a Project with global coverage on Bloomberg and Harvard Business Review.</li>
+    <li>Received Best Algorithm award in Honeywell wide competition.</li>
   </ul>
 
-  <h3>Big Data Technologies</h3>
-  <ul>
-    <li>Spark</li>
-    <li>Hadoop</li>
-    <li>Map Reduce</li>
-    <li>Hive</li>
-    <li>Pig</li>
-    <li>Oozie</li>
-    <li>Yarn</li>
-    <li>HDFS</li>
+  <h2>Certifications and Awards</h2>
+  <ul class="achievements-list">
+    <li>Cloudera Certified Hadoop Developer with 97% Marks</li>
+    <li>Six Sigma Green Belt certified</li>
   </ul>
-
-  <h3>Data Ingestion Systems</h3>
-  <ul>
-    <li>Kafka</li>
-    <li>Flume</li>
-    <li>Sqoop</li>
-  </ul>
-
-  <h3>Messaging and Event Driven</h3>
-  <ul>
-    <li>Kafka</li>
-  </ul>
-
-  <h3>Streaming</h3>
-  <ul>
-    <li>Spark Streaming</li>
-    <li>Structured Streaming</li>
-  </ul>
-
-  <h2>Recent Work Experience</h2>
-
-  <div class="experience">
-    <h3>Head of Forecasting and Data: Tesco, India (Jan 2023 - Present)</h3>
-    <p>Technologies Used: Spark, Spark Streaming, HBase, Hive, HDFS, Oozie</p>
-    <p>Harjeet Takes care of building Supply Chain Solutions on Big Data Platform. As part of My journey here I have built a 70+ member team which takes care of deploying Data Engineering solutions for different algorithms on Big Data Platform.</p>
-    </div>
 
   <h2>Education</h2>
-  <p>Punjab Technical University -
+  <p>Punjab Technical University - Bachelors of Technology in Computer Science (August 2005 - May 2009)</p>
+</body>
+</html>
