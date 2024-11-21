@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harjeet Kumar Rajpal - CV</title>
+    <title>Harjeet Kumar Rajpal - Professional CV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,49 +11,60 @@
             color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
         }
         .container {
             width: 80%;
-            max-width: 900px;
             margin: 20px auto;
             background: #fff;
             padding: 20px;
-            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3 {
-            color: #333;
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 10px;
         }
-        h1 {
-            font-size: 2em;
+        .header h1 {
+            margin: 0;
+            color: #0073e6;
         }
-        h2 {
-            margin-top: 20px;
-            color: #0056b3;
+        .header p {
+            margin: 5px 0;
         }
-        .contact, .links {
-            margin-top: 10px;
-        }
-        .contact a, .links a {
+        .header a {
+            color: #0073e6;
             text-decoration: none;
-            color: #0056b3;
         }
         .section {
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
-        ul {
+        .section h2 {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+            color: #0073e6;
+            margin-bottom: 10px;
+        }
+        .section ul {
             list-style: none;
             padding: 0;
         }
-        li {
-            margin-bottom: 10px;
+        .section ul li {
+            margin: 5px 0;
         }
-        .highlight {
-            color: #0056b3;
+        .achievements ul, .skills ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .projects, .experience {
+            margin: 20px 0;
+        }
+        .project-title, .job-title {
             font-weight: bold;
         }
-        .small-text {
+        .footer {
+            text-align: center;
+            margin-top: 30px;
             font-size: 0.9em;
             color: #666;
         }
@@ -61,71 +72,94 @@
 </head>
 <body>
     <div class="container">
-        <h1>Harjeet Kumar Rajpal</h1>
-        <div class="contact">
-            📞 <a href="tel:+919243024759">+91 92430 24759</a> | 📧 <a href="mailto:harjeet.kumar88@gmail.com">harjeet.kumar88@gmail.com</a>
-        </div>
-        <div class="links">
-            🌐 <a href="https://www.youtube.com/channel/YourChannelLinkHere" target="_blank">YouTube Channel</a>
-        </div>
-
-        <div class="section">
-            <h2>Professional Summary</h2>
+        <div class="header">
+            <h1>Harjeet Kumar Rajpal</h1>
             <p>
-                Transformational leader with over 15 years of experience in <span class="highlight">data engineering, ML engineering, and MLOps</span>. Proven track record of scaling high-performing teams, productionizing cutting-edge <span class="highlight">LLMs</span>, and delivering multi-million-dollar business value. Adept at aligning AI strategies with organizational goals, ensuring measurable outcomes and sustained growth. Passionate about leveraging AI to solve real-world problems while building scalable, reliable systems.
+                <a href="https://www.youtube.com/channel/YourYouTubeChannel" target="_blank">
+                    Visit My YouTube Channel
+                </a>
             </p>
+            <p>+91 92430 24759 | <a href="mailto:harjeet.kumar88@gmail.com">harjeet.kumar88@gmail.com</a></p>
         </div>
 
         <div class="section">
-            <h2>Key Achievements</h2>
+            <h2>Profile</h2>
+            <p>A results-driven leader and accomplished Head of Engineering with over 15 years of experience in building high-performing teams, driving multi-million-dollar initiatives, and transforming business processes through data science, AI, and big data technologies. Seeking a Director role to apply expertise in scaling data and analytics operations, optimizing supply chains, and delivering measurable business value.</p>
             <ul>
-                <li>Productionized <span class="highlight">LLMs</span> for customer service and demand forecasting, achieving <span class="highlight">40% faster response times</span> and <span class="highlight">25% improvement</span> in customer satisfaction.</li>
-                <li>Led the transformation of Tesco's demand forecasting landscape, resulting in £150M cost savings over 4 years.</li>
-                <li>Designed and implemented <span class="highlight">end-to-end MLOps pipelines</span>, reducing deployment times from weeks to days with 99.9% system uptime.</li>
-                <li>Built and scaled a 70+ member ML and Big Data engineering team at Tesco while maintaining a 95% retention rate.</li>
-                <li>Received global recognition for the "Next Best Actions" project, featured in <span class="highlight">Forbes</span> and <span class="highlight">Harvard Business Review</span>.</li>
+                <li>Expert in establishing and leading Machine Learning and Big Data initiatives for global organizations including Morgan Stanley, Tesco, and Honeywell.</li>
+                <li>Successfully led portfolios worth £5M/year, delivering £150M in cost savings over 4 years.</li>
+                <li>Architected and implemented a demand forecasting transformation strategy at Tesco.</li>
+                <li>Passionate about mentoring, team building, and introducing cutting-edge technologies to solve complex business challenges.</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Technical Skills</h2>
-            <p>
-                <span class="highlight">Programming Languages:</span> Java, Scala, Python<br>
-                <span class="highlight">Big Data:</span> Spark, Hadoop, Hive, Kafka, HDFS<br>
-                <span class="highlight">MLOps Tools:</span> MLflow, Kubeflow, Docker, Kubernetes<br>
-                <span class="highlight">Cloud Platforms:</span> AWS (S3, EMR, SageMaker), Azure, GCP<br>
-                <span class="highlight">LLM Frameworks:</span> LangChain, OpenAI APIs<br>
-                <span class="highlight">Certifications:</span> Cloudera Certified Hadoop Developer (97% score), Six Sigma Green Belt
-            </p>
+            <ul>
+                <li><strong>Programming Languages:</strong> Java, Scala, Python</li>
+                <li><strong>Big Data Technologies:</strong> Spark, Hadoop, MapReduce, Hive, Pig, Oozie, Yarn, HDFS</li>
+                <li><strong>Streaming & Messaging:</strong> Kafka, Spark Streaming</li>
+                <li><strong>Database Technologies:</strong> HBase, Cassandra, DynamoDB (explored)</li>
+            </ul>
         </div>
 
-        <div class="section">
-            <h2>Professional Experience</h2>
-            <h3>Head of Forecasting and Data – Tesco, India <span class="small-text">(Jan 2023 – Present)</span></h3>
+        <div class="section achievements">
+            <h2>Achievements</h2>
             <ul>
-                <li>Led a £5M/year portfolio, optimizing supply chain operations and achieving £150M cost savings.</li>
-                <li>Transformed Tesco’s demand forecasting system using big data and machine learning solutions.</li>
-                <li>Scaled a 70+ member ML and engineering team, driving technical excellence and innovation.</li>
-                <li>Introduced MLOps frameworks to ensure model reliability and continuous improvement.</li>
+                <li>Transformed Tesco's supply chain operations, generating £50M+ in annual benefits.</li>
+                <li>Winner of Honeywell's Best Algorithm Award for innovation in recommendation systems.</li>
+                <li>Recipient of Morgan Stanley's Innovation Award for groundbreaking solutions.</li>
+                <li>Project outcomes featured on Bloomberg and Harvard Business Review.</li>
             </ul>
-            <!-- More roles and achievements here -->
+        </div>
+
+        <div class="section experience">
+            <h2>Professional Experience</h2>
+
+            <h3 class="job-title">Head of Forecasting and Data - Tesco, India (Jan 2023 - Present)</h3>
+            <ul>
+                <li>Led the design and implementation of Tesco’s Retail Demand Forecasting platform, building and managing a 70+ member team.</li>
+                <li>Oversaw a £5M annual portfolio, delivering £150M in cost savings through strategic initiatives.</li>
+                <li>Partnered with stakeholders to define product roadmaps, drive innovation, and enhance operational efficiency.</li>
+            </ul>
+
+            <h3 class="job-title">Vice President - Analytics and Data Team, Morgan Stanley (Feb 2015 - Aug 2018)</h3>
+            <ul>
+                <li>Developed and deployed AI/ML-driven analytics solutions to improve customer engagement, detect fraud, and optimize operations.</li>
+                <li>Key architect of “Next Best Actions,” a solution recognized by Forbes and HBR.</li>
+                <li>Led cross-functional teams in creating scalable big data platforms to deliver high-value insights.</li>
+            </ul>
+
+            <h3 class="job-title">Senior Associate - Sapient (Aug 2013 - Feb 2015)</h3>
+            <ul>
+                <li>Architected and implemented big data solutions, including a semantic search engine and IoT analytics platform.</li>
+                <li>Defined technical standards, conducted code reviews, and explored new technologies to enhance project outcomes.</li>
+            </ul>
+
+            <h3 class="job-title">Senior Engineer - Honeywell (Aug 2009 - May 2013)</h3>
+            <ul>
+                <li>Designed and built knowledge network solutions, including recommendation algorithms and expert finders.</li>
+                <li>Developed “Deja Vu,” a project incorporating ML-powered user behavior analysis and content recommendations.</li>
+                <li>Key contributor to Honeywell's speech recognition and text analytics initiatives.</li>
+            </ul>
         </div>
 
         <div class="section">
             <h2>Education</h2>
-            <p>
-                <strong>Punjab Technical University</strong> <span class="small-text">(Aug 2005 – May 2009)</span><br>
-                B.Tech in Computer Science
-            </p>
+            <p>Bachelor of Technology in Computer Science, Punjab Technical University (2005 - 2009)</p>
         </div>
 
         <div class="section">
-            <h2>Selected Speaking Engagements</h2>
+            <h2>Certifications and Awards</h2>
             <ul>
-                <li>"Kafka Tutorial Series" – Kafka Meetup, Bangalore (2014)</li>
-                <li>"Optimizing Spark Streaming Applications" – Big Data Meetup, Bangalore (2017)</li>
-                <li>"LLM Deployment Best Practices" – AI Meetup, Bangalore (2023)</li>
+                <li>Cloudera Certified Hadoop Developer (97% score)</li>
+                <li>Six Sigma Green Belt Certified</li>
+                <li>Winner of Honeywell Algorithms Competition</li>
             </ul>
+        </div>
+
+        <div class="footer">
+            <p>Harjeet Kumar Rajpal © 2024</p>
         </div>
     </div>
 </body>
