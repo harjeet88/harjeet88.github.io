@@ -16,7 +16,15 @@ def parse_front_matter(content):
         for line in yaml_content.split('\n'):
             if ':' in line:
                 key, value = line.split(':', 1)
-                meta[key.strip()] = value.strip()
+                value = value.strip()
+                
+                # NEW: Remove surrounding quotes if they exist
+                if value.startswith('"') and value.endswith('"'):
+                    value = value[1:-1]
+                elif value.startswith("'") and value.endswith("'"):
+                    value = value[1:-1]
+                    
+                meta[key.strip()] = value
     return meta
 
 # --- PART 1: BLOGS ---
