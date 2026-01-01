@@ -15,6 +15,12 @@
         "file": "01-hello.md"
       },
       {
+        "title": "Chapter 1: Hello World",
+        "desc": "The beginning of the test.",
+        "order": 1,
+        "file": "01-intro-apache-spark.md"
+      },
+      {
         "title": "Chapter 2: Agentic AI",
         "desc": "Testing ordering logic.",
         "order": 2,
