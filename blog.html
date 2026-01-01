@@ -6,20 +6,22 @@
     <title>Tech Blog | Harjeet Kumar Rajpal</title>
     <style>
         :root { --primary: #2563eb; --secondary: #1e293b; --bg: #f8fafc; --text: #334155; }
-        body { font-family: -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
         
         nav { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
         nav a { margin: 0 15px; text-decoration: none; color: #334155; font-weight: bold; }
         nav a.active { color: var(--primary); }
 
-        .article-preview { margin-bottom: 40px; border-bottom: 1px solid #f1f5f9; padding-bottom: 30px; }
-        .article-date { color: #64748b; font-size: 0.9rem; }
-        .article-title { margin: 5px 0 10px 0; font-size: 1.5rem; color: var(--secondary); }
-        .article-title a { text-decoration: none; color: inherit; }
-        .article-title a:hover { color: var(--primary); }
-        .article-excerpt { line-height: 1.7; }
-        .read-more { color: var(--primary); font-weight: 600; text-decoration: none; }
+        .blog-list { list-style: none; padding: 0; }
+        .blog-item { padding: 25px 0; border-bottom: 1px solid #f1f5f9; transition: transform 0.2s; }
+        .blog-item:hover { transform: translateX(5px); }
+        .blog-date { font-size: 0.85rem; color: #64748b; margin-bottom: 5px; display: block; }
+        .blog-title { font-size: 1.4rem; margin: 0 0 10px 0; color: var(--secondary); }
+        .blog-title a { text-decoration: none; color: inherit; }
+        .blog-title a:hover { color: var(--primary); }
+        .blog-desc { color: #475569; line-height: 1.6; margin: 0; }
+        .read-more { display: inline-block; margin-top: 10px; color: var(--primary); font-weight: 600; text-decoration: none; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -31,27 +33,44 @@
         <a href="blog.html" class="active">Tech Blog</a>
     </nav>
 
-    <h1 style="margin-bottom: 40px;">Engineering Thoughts</h1>
-
-    <div class="article-preview">
-        <span class="article-date">January 15, 2026</span>
-        <h2 class="article-title"><a href="#">Why Agentic AI is the Future of Supply Chain</a></h2>
-        <p class="article-excerpt">
-            Traditional forecasting is static. Agentic AI allows systems to not just predict demand, but actively adjust inventory and query suppliers in real-time. Here is how we implemented MCP to solve this...
-        </p>
-        <a href="#" class="read-more">Read Full Post &rarr;</a>
-    </div>
-
-    <div class="article-preview">
-        <span class="article-date">December 20, 2025</span>
-        <h2 class="article-title"><a href="#">Migrating Legacy Monoliths with LLMs</a></h2>
-        <p class="article-excerpt">
-            We used custom LLM agents to refactor Java code into Scala microservices. The result? A 50% reduction in developer time. Here is the architecture we used...
-        </p>
-        <a href="#" class="read-more">Read Full Post &rarr;</a>
-    </div>
+    <h1>Engineering Thoughts</h1>
+    <div id="blog-container" class="blog-list">
+        </div>
 
 </div>
+
+<script>
+    // CONFIGURATION: Add your new blog posts here
+    const blogPosts = [
+        {
+            title: "Why Agentic AI is the Future of Supply Chain",
+            date: "January 15, 2026",
+            desc: "Traditional forecasting is static. Agentic AI allows systems to actively adjust inventory. Here is how we used MCP to solve this.",
+            file: "agentic-ai-supply-chain.md" // This must match the filename in /blogs folder
+        },
+        {
+            title: "Migrating Legacy Monoliths with LLMs",
+            date: "December 20, 2025",
+            desc: "We used custom LLM agents to refactor Java code into Scala microservices, reducing developer time by 50%.",
+            file: "legacy-migration-llm.md"
+        }
+    ];
+
+    // Render the list
+    const container = document.getElementById('blog-container');
+    
+    blogPosts.forEach(post => {
+        const article = document.createElement('article');
+        article.className = 'blog-item';
+        article.innerHTML = `
+            <span class="blog-date">${post.date}</span>
+            <h2 class="blog-title"><a href="post.html?file=${post.file}">${post.title}</a></h2>
+            <p class="blog-desc">${post.desc}</p>
+            <a href="post.html?file=${post.file}" class="read-more">Read Article &rarr;</a>
+        `;
+        container.appendChild(article);
+    });
+</script>
 
 </body>
 </html>
