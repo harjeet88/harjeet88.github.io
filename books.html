@@ -3,56 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library | Harjeet Kumar Rajpal</title>
+    <title>My Books | Harjeet Kumar Rajpal</title>
     <style>
-        /* Reuse root variables and nav styles from index.html */
         :root { --primary: #2563eb; --secondary: #1e293b; --bg: #f8fafc; --text: #334155; }
-        body { font-family: -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
         .container { max-width: 1000px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; }
+        
+        /* Updated Navigation Style */
         nav { text-align: center; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px;}
         nav a { margin: 0 15px; text-decoration: none; color: #334155; font-weight: bold; }
         nav a.active { color: var(--primary); }
 
-        /* Book Shelf Grid */
         .shelf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
-        .book-card {
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.2s;
-            background: white;
-            display: flex;
-            flex-direction: column;
-        }
+        .book-card { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; transition: transform 0.2s; background: white; display: flex; flex-direction: column; }
         .book-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-        
-        .book-cover {
-            height: 140px;
-            background: var(--primary);
-            color: white;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+        .book-cover { height: 140px; background: var(--primary); color: white; padding: 20px; display: flex; align-items: center; justify-content: center; text-align: center; }
         .book-cover h2 { margin: 0; font-size: 1.5rem; }
-        
         .book-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .book-desc { font-size: 0.95rem; color: #64748b; margin-bottom: 20px; flex-grow: 1; }
-        
-        .read-btn {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background: var(--secondary);
-            color: white;
-            padding: 10px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-        }
+        .read-btn { display: block; width: 100%; text-align: center; background: var(--secondary); color: white; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -60,12 +29,12 @@
 <div class="container">
     <nav>
         <a href="index.html">Home</a> |
-        <a href="books.html" class="active">Library</a> |
+        <a href="books.html" class="active">Books</a> |
         <a href="courses.html">Courses</a> |
         <a href="blog.html">Blog</a>
     </nav>
 
-    <h1>My Engineering Library</h1>
+    <h1>My Engineering Books</h1>
     <p style="margin-bottom: 40px;">Detailed handbooks on AI, Big Data, and Distributed Systems.</p>
 
     <div id="shelf" class="shelf-grid">
@@ -73,11 +42,16 @@
 </div>
 
 <script>
-    fetch('library_index.json')
+    // Note: Now fetching 'books_index.json' instead of 'library_index.json'
+    fetch('books_index.json')
         .then(r => r.json())
-        .then(library => {
+        .then(books => {
             const shelf = document.getElementById('shelf');
-            library.forEach(book => {
+            if (books.length === 0) {
+                shelf.innerHTML = "<p>No books found. Add a folder to /books to get started.</p>";
+                return;
+            }
+            books.forEach(book => {
                 const card = document.createElement('div');
                 card.className = 'book-card';
                 card.innerHTML = `
@@ -86,11 +60,14 @@
                     </div>
                     <div class="book-body">
                         <p class="book-desc">${book.details.description}</p>
-                        <a href="toc.html?book=${book.id}" class="read-btn">Open Book</a>
+                        <a href="toc.html?book=${book.id}" class="read-btn">Read Book</a>
                     </div>
                 `;
                 shelf.appendChild(card);
             });
+        })
+        .catch(e => {
+            document.getElementById('shelf').innerHTML = "Loading...";
         });
 </script>
 </body>
