@@ -30,18 +30,20 @@ jobs:
 
     - name: Commit and Push JSON
       run: |
+        # 1. Configure the bot identity FIRST
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        # --- THE FIX STARTS HERE ---
-        # 1. Fetch the latest changes from the server
-        git pull --rebase origin main
-        
-        # 2. Add BOTH index files (blog and books)
+        # 2. Add the generated files to the staging area
         git add blog_index.json books_index.json
         
-        # 3. Commit (only if there are changes)
+        # 3. Commit them locally (this saves the "unstaged changes")
+        # The '|| echo' part prevents error if there's nothing new to save
         git commit -m "Auto-update indexes" || echo "No changes to commit"
         
-        # 4. Push
+        # 4. NOW pull the latest changes from the server
+        # Since we committed, Git won't complain about unstaged changes
+        git pull --rebase origin main
+        
+        # 5. Push everything up
         git push
