@@ -21,7 +21,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const bookId = urlParams.get('book'); // e.g., 'ai-handbook'
 
-    fetch('library_index.json')
+    fetch('books_index.json')
         .then(r => r.json())
         .then(library => {
             // Find the correct book in the array
