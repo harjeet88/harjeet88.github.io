@@ -10,7 +10,7 @@
     "chapters": [
       {
         "title": "Chapter 1: Introduction to Apache Spark",
-        "desc": "The beginning of the test.",
+        "desc": "Error: This is now safe",
         "order": 1,
         "file": "01-intro-apache-spark.md"
       },
