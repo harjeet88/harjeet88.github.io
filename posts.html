@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Harjeet Kumar Rajpal</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root { --primary: #2563eb; --secondary: #1e293b; --bg: #ffffff; --text: #334155; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); background: #f8fafc; margin: 0; padding: 0; }
+        
+        .container { max-width: 800px; margin: 0 auto; background: var(--bg); min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+        
+        /* Navigation */
+        nav { padding: 20px; text-align: center; border-bottom: 1px solid #e2e8f0; background: white; }
+        nav a { margin: 0 10px; text-decoration: none; color: var(--secondary); font-weight: 600; }
+        nav a:hover { color: var(--primary); }
+
+        /* Blog Content Styling */
+        #blog-content { padding: 40px; }
+        #blog-content h1 { color: var(--secondary); font-size: 2.2rem; margin-bottom: 10px; line-height: 1.2; }
+        #blog-content h2 { color: var(--secondary); margin-top: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+        #blog-content pre { background: #1e293b; color: #e2e8f0; padding: 15px; border-radius: 8px; overflow-x: auto; }
+        #blog-content code { font-family: 'Consolas', 'Monaco', monospace; background: #f1f5f9; padding: 2px 5px; border-radius: 4px; color: #d946ef; }
+        #blog-content pre code { background: transparent; color: inherit; padding: 0; }
+        #blog-content blockquote { border-left: 4px solid var(--primary); margin: 0; padding-left: 20px; color: #64748b; font-style: italic; }
+        #blog-content img { max-width: 100%; border-radius: 8px; margin: 20px 0; }
+        
+        /* Loading State */
+        #loading { text-align: center; padding: 50px; font-style: italic; color: #94a3b8; }
+        
+        .meta { color: #94a3b8; font-size: 0.9rem; margin-bottom: 30px; display: block; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="courses.html">AI Courses</a> |
+        <a href="blog.html">Tech Blog</a>
+    </nav>
+
+    <div id="blog-content">
+        <a href="blog.html" class="back-btn">&larr; Back to Articles</a>
+        <div id="loading">Loading post...</div>
+        </div>
+</div>
+
+<script>
+    // 1. Get the filename from the URL query parameter (e.g., post.html?file=my-post.md)
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get('file');
+
+    const contentDiv = document.getElementById('blog-content');
+    const loadingDiv = document.getElementById('loading');
+
+    if (!file) {
+        loadingDiv.innerText = "Error: No post specified.";
+    } else {
+        // 2. Fetch the Markdown file from the /blogs folder
+        fetch(`blogs/${file}`)
+            .then(response => {
+                if (!response.ok) throw new Error("Post not found.");
+                return response.text();
+            })
+            .then(markdown => {
+                // 3. Convert Markdown to HTML using Marked.js
+                // We create a temporary div to separate metadata (like Title) if needed, 
+                // but for simplicity, we render everything.
+                const html = marked.parse(markdown);
+                
+                // Remove loading spinner and inject HTML
+                loadingDiv.style.display = 'none';
+                
+                // Create a container for the parsed content
+                const article = document.createElement('article');
+                article.innerHTML = html;
+                contentDiv.appendChild(article);
+                
+                // Update Page Title based on first H1 found
+                const firstH1 = article.querySelector('h1');
+                if(firstH1) document.title = firstH1.innerText + " | Harjeet Kumar Rajpal";
+            })
+            .catch(error => {
+                loadingDiv.innerText = "Error loading post: " + error.message;
+            });
+    }
+</script>
+
+</body>
+</html>
