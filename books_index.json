@@ -15,8 +15,8 @@
         "file": "01-intro-apache-spark.md"
       },
       {
-        "title": "Chapter 2: Agentic AI",
-        "desc": "Testing ordering logic.",
+        "title": "Chapter 2: Spark Architecture",
+        "desc": "Error: This is now safe",
         "order": 2,
         "file": "02-agents.md"
       },
