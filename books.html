@@ -47,7 +47,7 @@
     // Debugging: Print to console
     console.log("Attempting to fetch books_index.json...");
 
-    fetch('books_index.json')
+    fetch('books_index.json?t=' + new Date().getTime())
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Failed to load index file (Status: ${response.status}). File likely missing.`);
