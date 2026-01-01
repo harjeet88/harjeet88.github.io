@@ -1,143 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Harjeet Kumar Rajpal | AI Leader</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harjeet Kumar Rajpal | Group Head of Engineering & AI</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e293b;
+            --accent: #f8fafc;
+            --text: #334155;
+            --text-light: #64748b;
+            --bg: #ffffff;
+        }
 
-  <!-- SEO -->
-  <meta name="description" content="AI Leader with 16+ years experience in Enterprise GenAI, Agentic AI, LLMOps, MCP, and AI Strategy. £250M+ business impact across retail and finance.">
-  <meta name="keywords" content="AI Leader, Director of AI, GenAI, Agentic AI, LLMOps, RAG, MCP, Enterprise AI Strategy">
-  <meta name="author" content="Harjeet Kumar Rajpal">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background: var(--accent);
+        }
 
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 24px;
-    }
-    h1, h2 {
-      color: #f8fafc;
-    }
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 8px;
-    }
-    h2 {
-      margin-top: 48px;
-      font-size: 1.6rem;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 6px;
-    }
-    .subtitle {
-      color: #94a3b8;
-      font-size: 1.1rem;
-      margin-bottom: 24px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    .highlight {
-      color: #38bdf8;
-      font-weight: 600;
-    }
-    .links a {
-      color: #38bdf8;
-      text-decoration: none;
-      margin-right: 16px;
-    }
-    .links a:hover {
-      text-decoration: underline;
-    }
-    .footer {
-      margin-top: 64px;
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-  </style>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--bg);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        h1 {
+            color: var(--secondary);
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+        }
+
+        .headline {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            padding: 30px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        h2 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* About */
+        .summary p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--accent);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .skill-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--secondary);
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 30px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .dates {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .job ul {
+            padding-left: 20px;
+        }
+
+        .job li {
+            margin-bottom: 8px;
+        }
+
+        /* Key Metrics */
+        .metrics {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background: var(--secondary);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .metric-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary); /* Lighter blue for contrast */
+            color: #60a5fa;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
 
-    <h1>Harjeet Kumar Rajpal</h1>
-    <div class="subtitle">
-      AI Leader | Enterprise GenAI & Agentic Systems | LLMOps, RAG, MCP<br/>
-      £250M+ Business Impact | Scaling AI Platforms & Teams
+<div class="container">
+
+    <header>
+        <h1>Harjeet Kumar Rajpal</h1>
+        <div class="headline">Group Head of Engineering | AI & Data Science Leader</div>
+        <p style="margin-top: 5px; color: #64748b;">Generative AI · Agentic Systems (MCP) · Driving £250M+ Value</p>
+        
+        <div class="contact-info">
+            <a href="mailto:harjeet.contact@gmail.com">harjeet.contact@gmail.com</a> •
+            <a href="https://www.linkedin.com/in/harjeetk/" target="_blank">LinkedIn</a> •
+            <a href="https://github.com/harjeet88" target="_blank">GitHub</a> •
+            <a href="https://youtube.com/datasavvy" target="_blank">YouTube Channel</a>
+        </div>
+    </header>
+
+    <div class="metrics">
+        <div class="metric">
+            <span class="metric-value">£250M+</span>
+            <span class="metric-label">Business Value Delivered</span>
+        </div>
+        <div class="metric">
+            <span class="metric-value">70+</span>
+            <span class="metric-label">Engineers Led</span>
+        </div>
+        <div class="metric">
+            <span class="metric-value">16+</span>
+            <span class="metric-label">Years Experience</span>
+        </div>
     </div>
 
-    <div class="links">
-      <a href="https://www.linkedin.com/in/harjeetk/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/harjeet88" target="_blank">GitHub</a>
-      <a href="https://youtube.com/datasavvy" target="_blank">YouTube</a>
-      <a href="mailto:harjeet.contact@gmail.com">Email</a>
-    </div>
+    <section class="summary">
+        <h2>About Me</h2>
+        <p>
+            I am a <strong>Group Head of Engineering</strong> with over 16 years of experience bridging the gap between technical innovation and P&L impact. My expertise lies in the evolution of enterprise systems—from traditional <strong>Data Science & ML</strong> to modern <strong>Generative AI and Agentic Architectures</strong>.
+        </p>
+        <p>
+            Currently, I focus on moving beyond simple chatbots to build <strong>production-grade Agentic AI systems</strong>. I specialize in using <strong>Model Context Protocol (MCP)</strong> and <strong>RAG</strong> to enable LLMs to securely interact with complex enterprise tools and real-time data. I don't just build models; I build "AI-first" organizations where models drive core business decisions.
+        </p>
+    </section>
 
-    <h2>About</h2>
-    <p>
-      I am a senior AI and engineering leader with 16+ years of experience transforming
-      <span class="highlight">enterprise data into decision-making intelligence</span>
-      across retail and financial services.
-    </p>
+    <section>
+        <h2>Technical Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>🤖 Generative AI & Agents</h3>
+                <p>Agentic Workflows, MCP (Model Context Protocol), RAG Pipelines, LangChain, Vector DBs, LLMOps.</p>
+            </div>
+            <div class="skill-card">
+                <h3>📈 Data Science & ML</h3>
+                <p>Predictive Modeling, Forecasting, Computer Vision, TensorFlow, Scikit-learn, Spark ML.</p>
+            </div>
+            <div class="skill-card">
+                <h3>☁️ Cloud & Big Data</h3>
+                <p>AWS (SageMaker, Bedrock), Apache Spark, Kafka, Hadoop, Distributed Systems.</p>
+            </div>
+            <div class="skill-card">
+                <h3>💼 Strategic Leadership</h3>
+                <p>Team Scaling (12 to 70+), AI Governance, FinOps, Tech Strategy, C-Suite Partnership.</p>
+            </div>
+        </div>
+    </section>
 
-    <p>
-      My expertise spans the evolution of enterprise AI systems—from traditional data science
-      and machine learning to <span class="highlight">Generative AI, Agentic AI, and LLM-based architectures</span>.
-      I own and shape AI platforms that operate autonomously, securely, and at scale.
-    </p>
+    <section>
+        <h2>Professional Experience</h2>
 
-    <p>
-      My current focus is on building <span class="highlight">production-grade Agentic AI systems</span>
-      using Model Context Protocol (MCP), Retrieval-Augmented Generation (RAG), and LLMOps—enabling
-      LLMs to reason over complex enterprise tools, workflows, and real-time data.
-    </p>
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Group Head of Forecasting & Data Engineering</span>
+                <span class="company">Tesco</span>
+            </div>
+            <div class="dates">Jan 2023 – Present</div>
+            <ul>
+                <li><strong>AI Strategy:</strong> Directing the enterprise AI roadmap and securing £5M annual budget to pivot from traditional analytics to Generative AI solutions.</li>
+                <li><strong>Agentic AI:</strong> Architecting Multi-Agent Systems using LLMs to automate complex supply chain "what-if" scenarios, reducing decision latency by 40%.</li>
+                <li><strong>Production RAG:</strong> Deployed knowledge assistants democratizing access to 5TB+ of supply chain data.</li>
+                <li><strong>Legacy Modernization:</strong> Using LLM-driven code migration agents to accelerate the transformation of legacy Java monoliths into microservices.</li>
+            </ul>
+        </div>
 
-    <h2>Career Highlights</h2>
-    <ul>
-      <li>Delivered <span class="highlight">£250M+</span> in measurable business value through ML and AI platforms</li>
-      <li>Led enterprise adoption of <span class="highlight">Generative AI and Agentic AI systems</span></li>
-      <li>Built and scaled AI organizations of <span class="highlight">70+ engineers</span></li>
-      <li>Partnered with C-suite leaders on AI roadmap, governance, and ROI</li>
-      <li>Converted internal ML capabilities into reusable AI products and platforms</li>
-    </ul>
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Engineering Manager</span>
+                <span class="company">Tesco</span>
+            </div>
+            <div class="dates">Aug 2018 – Dec 2022</div>
+            <ul>
+                <li><strong>Team Scaling:</strong> Scaled the engineering organization from 12 to 70+ members, establishing best practices in Distributed Computing.</li>
+                <li><strong>£206M Waste Reduction:</strong> Led the delivery of the core Demand Forecasting engine (Spark/HBase), directly attributable to massive supply chain savings.</li>
+                <li><strong>System Accuracy:</strong> Achieved 95% forecast accuracy for high-priority "Star" range products.</li>
+                <li><strong>Recognition:</strong> Won the "Annual Award for Forecast Excellence" 4 times (2019-2022).</li>
+            </ul>
+        </div>
 
-    <h2>Current Role</h2>
-    <p>
-      <strong>Group Head of Engineering – Forecasting & Data</strong><br/>
-      Tesco | Bengaluru, India
-    </p>
-    <ul>
-      <li>Direct enterprise AI roadmap and secure annual budgets for GenAI transformation</li>
-      <li>Architect and govern <span class="highlight">Agentic AI systems</span> reducing planning latency by 40%</li>
-      <li>Lead industry-scale demand, weather, and promotion forecasting platforms</li>
-      <li>Deploy RAG-based AI assistants democratizing access to enterprise data</li>
-      <li>Modernize legacy monoliths using LLM-driven code migration agents</li>
-    </ul>
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Manager - Analytics & Data</span>
+                <span class="company">Morgan Stanley</span>
+            </div>
+            <div class="dates">Feb 2015 – Aug 2018</div>
+            <ul>
+                <li><strong>Real-Time Fraud AI:</strong> Deployed a Kafka/Spark Streaming pipeline reducing fraudulent transactions by 18%.</li>
+                <li><strong>Client Intelligence:</strong> Architected a "Next Best Action" engine using ML to recommend personalized financial products (featured in Forbes).</li>
+                <li><strong>MLOps:</strong> Built the MLOps practice from scratch and mentored a team of 20+ data engineers.</li>
+            </ul>
+        </div>
 
-    <h2>Focus Areas</h2>
-    <ul>
-      <li>Enterprise GenAI & Agentic AI Platforms</li>
-      <li>AI Strategy, Governance, Risk & Cost Control</li>
-      <li>LLMOps, RAG Architectures, MCP Standardization</li>
-      <li>AI Productization & Monetization</li>
-      <li>Building AI-first organizations</li>
-    </ul>
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Associate – Big Data</span>
+                <span class="company">Sapient</span>
+            </div>
+            <div class="dates">Aug 2013 – Feb 2015</div>
+            <ul>
+                <li>Built a scalable IoT analytics platform processing 1TB/day of sensor data.</li>
+                <li>Designed an early-stage semantic search engine using NLP, improving relevance by 30%.</li>
+            </ul>
+        </div>
+    </section>
 
-    <div class="footer">
-      © 2026 Harjeet Kumar Rajpal · Built with GitHub Pages
-    </div>
+    <footer>
+        <p>&copy; 2026 Harjeet Kumar Rajpal. Built with GitHub Pages.</p>
+    </footer>
 
-  </div>
+</div>
+
 </body>
 </html>
