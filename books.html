@@ -42,15 +42,32 @@
 </div>
 
 <script>
-    // Note: Now fetching 'books_index.json' instead of 'library_index.json'
+    const shelf = document.getElementById('shelf');
+
+    // Debugging: Print to console
+    console.log("Attempting to fetch books_index.json...");
+
     fetch('books_index.json')
-        .then(r => r.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load index file (Status: ${response.status}). File likely missing.`);
+            }
+            return response.json();
+        })
         .then(books => {
-            const shelf = document.getElementById('shelf');
-            if (books.length === 0) {
-                shelf.innerHTML = "<p>No books found. Add a folder to /books to get started.</p>";
+            // Check if books array is empty
+            if (!books || books.length === 0) {
+                shelf.innerHTML = `<div style="text-align:center; padding:20px; background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px;">
+                    <h3>No Books Found</h3>
+                    <p>The system scanned your <code>/books</code> folder but found nothing.</p>
+                    <p><strong>Check:</strong> Did you add a <code>meta.json</code> file inside your book folder?</p>
+                </div>`;
                 return;
             }
+
+            // Clear loading message
+            shelf.innerHTML = ''; 
+
             books.forEach(book => {
                 const card = document.createElement('div');
                 card.className = 'book-card';
@@ -66,8 +83,19 @@
                 shelf.appendChild(card);
             });
         })
-        .catch(e => {
-            document.getElementById('shelf').innerHTML = "Loading...";
+        .catch(error => {
+            console.error(error);
+            shelf.innerHTML = `
+                <div style="color: #dc2626; background: #fee2e2; padding: 20px; border-radius: 8px; border: 1px solid #fca5a5; text-align: center;">
+                    <h3>⚠️ Error Loading Books</h3>
+                    <p>${error.message}</p>
+                    <p style="font-size:0.9rem; margin-top:10px;">
+                        <strong>Troubleshooting:</strong><br>
+                        1. Go to your GitHub Repo "Code" tab.<br>
+                        2. Look for a file named <code>books_index.json</code> in the root.<br>
+                        3. If it's missing, your Action failed to run.
+                    </p>
+                </div>`;
         });
 </script>
 </body>
