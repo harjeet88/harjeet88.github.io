@@ -1,0 +1,35 @@
+[
+  {
+    "id": "test-guide",
+    "details": {
+      "id": "test-guide",
+      "title": "Test Guide to AI",
+      "description": "This is a test book to verify the multi-level structure.",
+      "cover_color": "#10b981"
+    },
+    "chapters": [
+      {
+        "title": "Chapter 1: Hello World",
+        "desc": "The beginning of the test.",
+        "order": 1,
+        "file": "01-hello.md"
+      },
+      {
+        "title": "Chapter 2: Agentic AI",
+        "desc": "Testing ordering logic.",
+        "order": 2,
+        "file": "02-agents.md"
+      }
+    ]
+  },
+  {
+    "id": "ai-handbook",
+    "details": {
+      "id": "ai-handbook",
+      "title": "The AI Engineering Handbook",
+      "description": "A guide to building Agentic Systems and MCP architectures.",
+      "cover_color": "#2563eb"
+    },
+    "chapters": []
+  }
+]
