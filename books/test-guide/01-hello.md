@@ -1,6 +1,6 @@
 ---
-title: Chapter 1: Hello World
-desc: The beginning of the test.
+title: "Chapter 1: Hello World"
+desc: "Error: This is now safe"
 order: 100
 ---
 
