@@ -5,6 +5,8 @@ on:
     paths:
       - 'blogs/**.md'
       - 'books/**.md'
+      - 'scripts/**'
+      - .github/workflows/**' # Run when I update this YAML file
 
 jobs:
   build:
