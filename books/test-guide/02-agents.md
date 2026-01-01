@@ -1,8 +1,7 @@
 ---
-title: Chapter 2: Agentic AI
-desc: Testing ordering logic.
+title: "Chapter 2: Spark Architecture"
+desc: "Error: This is now safe"
 order: 2
 ---
 
-# Agentic AI
-This should appear second in the list.
+# Apache Spark Architecture
