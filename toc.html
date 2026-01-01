@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table of Contents</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #334155; }
+        .chapter-item { padding: 15px; border-bottom: 1px solid #eee; display: flex; align-items: center; }
+        .chapter-num { font-weight: bold; color: #cbd5e1; font-size: 1.5rem; margin-right: 20px; min-width: 30px;}
+        .chapter-link { text-decoration: none; font-size: 1.2rem; color: #1e293b; font-weight: 600; }
+        .chapter-link:hover { color: #2563eb; }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #2563eb; }
+    </style>
+</head>
+<body>
+    <a href="books.html" class="back-link">← Back to Library</a>
+    <h1 id="book-title">Loading...</h1>
+    <div id="chapter-list"></div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const bookId = urlParams.get('book'); // e.g., 'ai-handbook'
+
+    fetch('library_index.json')
+        .then(r => r.json())
+        .then(library => {
+            // Find the correct book in the array
+            const book = library.find(b => b.id === bookId);
+            
+            if (book) {
+                document.getElementById('book-title').innerText = book.details.title;
+                const list = document.getElementById('chapter-list');
+                
+                book.chapters.forEach(chapter => {
+                    const div = document.createElement('div');
+                    div.className = 'chapter-item';
+                    // Link format: post.html?folder=books&book=ai-handbook&file=01.md
+                    div.innerHTML = `
+                        <div class="chapter-num">#${chapter.order}</div>
+                        <a class="chapter-link" href="post.html?folder=books&book=${bookId}&file=${chapter.file}">
+                            ${chapter.title}
+                        </a>
+                    `;
+                    list.appendChild(div);
+                });
+            }
+        });
+</script>
+</body>
+</html>
