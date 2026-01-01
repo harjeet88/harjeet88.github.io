@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Why Agentic AI is the Future",
+    "date": "2026-01-15",
+    "desc": "Traditional forecasting is static. Agentic AI allows systems to actively adjust inventory.",
+    "file": "test_post.md"
+  },
+  {
+    "title": "MCP vs API",
+    "date": "2026-01-1",
+    "desc": "What is difference bween Model context protocol and API. why we need MCP",
+    "file": "mcp-vs-api.md"
+  }
+]
