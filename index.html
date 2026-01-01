@@ -53,6 +53,24 @@
             margin: 10px 0;
         }
 
+        /* Navigation */
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            position: relative;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        nav a.active {
+            color: var(--primary);
+        }
+
         .contact-info {
             margin-top: 15px;
             font-size: 0.95rem;
@@ -167,13 +185,34 @@
             display: block;
             font-size: 2rem;
             font-weight: bold;
-            color: var(--primary); /* Lighter blue for contrast */
             color: #60a5fa;
         }
 
         .metric-label {
             font-size: 0.9rem;
             opacity: 0.9;
+        }
+
+        /* Awards Grid */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .award-item {
+            background: #f0f9ff;
+            border-left: 3px solid #60a5fa;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .award-title {
+            font-weight: bold;
+            display: block;
+            color: var(--secondary);
+        }
+        .award-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
         }
 
         /* Footer */
@@ -190,22 +229,24 @@
 <div class="container">
 
     <header>
-    <h1>Harjeet Kumar Rajpal</h1>
-    <div class="headline">Group Head of Engineering | AI & Data Science Leader</div>
-    
-    <nav style="margin: 20px 0;">
-        <a href="index.html" style="margin: 0 15px; text-decoration: none; color: #2563eb; font-weight: bold;">Home</a> |
-        <a href="courses.html" style="margin: 0 15px; text-decoration: none; color: #334155; font-weight: bold;">AI Courses</a> |
-        <a href="blog.html" style="margin: 0 15px; text-decoration: none; color: #334155; font-weight: bold;">Tech Blog</a>
-    </nav>
-    <p style="margin-top: 5px; color: #64748b;">Generative AI · Agentic Systems (MCP) · Driving £250M+ Value</p>
-    
-    <div class="contact-info">
-        <a href="mailto:harjeet.contact@gmail.com">harjeet.contact@gmail.com</a> •
-        <a href="https://www.linkedin.com/in/harjeetk/" target="_blank">LinkedIn</a> •
-        <a href="https://github.com/harjeet88" target="_blank">GitHub</a>
-    </div>
-</header>
+        <h1>Harjeet Kumar Rajpal</h1>
+        <div class="headline">Group Head of Engineering | AI & Data Science Leader</div>
+        
+        <nav>
+            <a href="index.html" class="active">Home</a> |
+            <a href="courses.html">AI Courses</a> |
+            <a href="blog.html">Tech Blog</a>
+        </nav>
+
+        <p style="margin-top: 5px; color: #64748b;">Generative AI · Agentic Systems (MCP) · Driving £250M+ Value</p>
+        
+        <div class="contact-info">
+            <a href="mailto:harjeet.contact@gmail.com">harjeet.contact@gmail.com</a> •
+            <a href="https://www.linkedin.com/in/harjeetk/" target="_blank">LinkedIn</a> •
+            <a href="https://github.com/harjeet88" target="_blank">GitHub</a> •
+            <a href="https://youtube.com/datasavvy" target="_blank">YouTube Channel</a>
+        </div>
+    </header>
 
     <div class="metrics">
         <div class="metric">
@@ -306,16 +347,3 @@
             <div class="dates">Aug 2013 – Feb 2015</div>
             <ul>
                 <li>Built a scalable IoT analytics platform processing 1TB/day of sensor data.</li>
-                <li>Designed an early-stage semantic search engine using NLP, improving relevance by 30%.</li>
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Harjeet Kumar Rajpal. Built with GitHub Pages.</p>
-    </footer>
-
-</div>
-
-</body>
-</html>
