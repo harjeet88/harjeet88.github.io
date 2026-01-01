@@ -1,5 +1,5 @@
 ---
-title: Chapter 1: Hello World
+title: Chapter 1: Introduction to Apache Spark
 desc: The beginning of the test.
 order: 1
 ---
