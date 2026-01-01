@@ -22,7 +22,7 @@
       },
       {
         "title": "Chapter 1: Hello World",
-        "desc": "The beginning of the test.",
+        "desc": "Error: This is now safe",
         "order": 100,
         "file": "01-hello.md"
       }
