@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog | Harjeet Kumar Rajpal</title>
+    <style>
+        :root { --primary: #2563eb; --secondary: #1e293b; --bg: #f8fafc; --text: #334155; }
+        body { font-family: -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; }
+        
+        nav { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        nav a { margin: 0 15px; text-decoration: none; color: #334155; font-weight: bold; }
+        nav a.active { color: var(--primary); }
+
+        .article-preview { margin-bottom: 40px; border-bottom: 1px solid #f1f5f9; padding-bottom: 30px; }
+        .article-date { color: #64748b; font-size: 0.9rem; }
+        .article-title { margin: 5px 0 10px 0; font-size: 1.5rem; color: var(--secondary); }
+        .article-title a { text-decoration: none; color: inherit; }
+        .article-title a:hover { color: var(--primary); }
+        .article-excerpt { line-height: 1.7; }
+        .read-more { color: var(--primary); font-weight: 600; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="courses.html">AI Courses</a> |
+        <a href="blog.html" class="active">Tech Blog</a>
+    </nav>
+
+    <h1 style="margin-bottom: 40px;">Engineering Thoughts</h1>
+
+    <div class="article-preview">
+        <span class="article-date">January 15, 2026</span>
+        <h2 class="article-title"><a href="#">Why Agentic AI is the Future of Supply Chain</a></h2>
+        <p class="article-excerpt">
+            Traditional forecasting is static. Agentic AI allows systems to not just predict demand, but actively adjust inventory and query suppliers in real-time. Here is how we implemented MCP to solve this...
+        </p>
+        <a href="#" class="read-more">Read Full Post &rarr;</a>
+    </div>
+
+    <div class="article-preview">
+        <span class="article-date">December 20, 2025</span>
+        <h2 class="article-title"><a href="#">Migrating Legacy Monoliths with LLMs</a></h2>
+        <p class="article-excerpt">
+            We used custom LLM agents to refactor Java code into Scala microservices. The result? A 50% reduction in developer time. Here is the architecture we used...
+        </p>
+        <a href="#" class="read-more">Read Full Post &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>
