@@ -10,5 +10,11 @@
     "date": "2026-01-1",
     "desc": "What is difference bween Model context protocol and API. why we need MCP",
     "file": "mcp-vs-api.md"
+  },
+  {
+    "title": "Introduction to Model context protocol (MCP) and simple implementation",
+    "date": "2026-01-1",
+    "desc": "What is Model context protocol and how to build a simple MCP solution",
+    "file": "Introduction-to-mcp.md"
   }
 ]
