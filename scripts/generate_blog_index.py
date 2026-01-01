@@ -76,3 +76,4 @@ if os.path.exists(BOOK_DIR):
 with open(OUTPUT_BOOKS, 'w', encoding='utf-8') as f:
     json.dump(books, f, indent=2)
 print(f"Generated {OUTPUT_BOOKS}")
+
