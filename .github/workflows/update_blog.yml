@@ -3,17 +3,20 @@ name: Update Blog Index
 on:
   push:
     paths:
-      - 'blogs/**.md'  # Only run when a blog post is added/changed
+      - 'blogs/**.md'
+      - 'books/**.md'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Allow the bot to commit the JSON file back to the repo
+      contents: write
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Fetch full history to ensure rebase works
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -27,6 +30,16 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add blog_index.json
-        git commit -m "Auto-update blog index" || echo "No changes to commit"
+        
+        # --- THE FIX STARTS HERE ---
+        # 1. Fetch the latest changes from the server
+        git pull --rebase origin main
+        
+        # 2. Add BOTH index files (blog and books)
+        git add blog_index.json books_index.json
+        
+        # 3. Commit (only if there are changes)
+        git commit -m "Auto-update indexes" || echo "No changes to commit"
+        
+        # 4. Push
         git push
