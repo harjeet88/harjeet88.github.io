@@ -2,9 +2,9 @@
   {
     "id": "test-guide",
     "details": {
-      "id": "test-guide",
-      "title": "Test Guide to AI",
-      "description": "This is a test book to verify the multi-level structure.",
+      "id": "apache-spark",
+      "title": "Learn Apache Spark",
+      "description": "This is book about Apache Spark",
       "cover_color": "#10b981"
     },
     "chapters": [
