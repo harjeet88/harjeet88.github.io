@@ -1,5 +1,11 @@
 [
   {
+    "title": "MCP Strategy",
+    "date": "2026-01-2",
+    "desc": "Crafting an Effective MCP Strategy for Your Company: A Comprehensive Guide",
+    "file": "MCP-strategy.md"
+  },
+  {
     "title": "MCP vs API",
     "date": "2026-01-1",
     "desc": "What is difference bween Model context protocol and API. why we need MCP",
