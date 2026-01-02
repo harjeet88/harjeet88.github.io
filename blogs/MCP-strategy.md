@@ -1,7 +1,7 @@
 ---
-title: MCP Strategy
+title: "MCP Strategy"
 date: 2026-01-2
-desc: Crafting an Effective MCP Strategy for Your Company: A Comprehensive Guide
+desc: "Crafting an Effective MCP Strategy for Your Company: A Comprehensive Guide"
 ---
 # Crafting an Effective MCP Strategy for Your Company: A Comprehensive Guide
 
