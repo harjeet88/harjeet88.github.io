@@ -1,4 +1,8 @@
-
+---
+title: "Chapter 6: Spark Dataframe operations"
+desc: "Dataframes Tutorial"
+order: 6
+---
 # Chapter 6: Basic DataFrame Operations and Spark SQL
 
 In previous chapters, we explored Spark's data abstractions and how to create **DataFrames**. This chapter dives deeper into foundational operations that form the building blocks of most Spark applications. We'll cover inspecting data, selecting and manipulating columns, filtering and sorting rows, adding or modifying columns, handling missing values, distinct and duplicate removal, sampling, limiting results, and more.
