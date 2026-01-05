@@ -27,6 +27,12 @@
         "file": "03_Pyspark_Architecture.md"
       },
       {
+        "title": "Chapter 5: Spark Session and Spark context",
+        "desc": "Understanding Spark Session and Spark context",
+        "order": 5,
+        "file": "spark-session-and-spark-context.md"
+      },
+      {
         "title": "Chapter 1: Hello World",
         "desc": "Error: This is now safe",
         "order": 100,
