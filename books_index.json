@@ -33,6 +33,12 @@
         "file": "04-introduction-to-dataframes.md"
       },
       {
+        "title": "Chapter 5: Spark Session and Spark context",
+        "desc": "Understanding Spark Session and Spark context",
+        "order": 5,
+        "file": "05-spark-session-and-spark-context.md"
+      },
+      {
         "title": "Chapter 6: Spark Dataframe operations",
         "desc": "Dataframes Tutorial",
         "order": 6,
