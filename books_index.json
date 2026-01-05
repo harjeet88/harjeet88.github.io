@@ -15,6 +15,12 @@
         "file": "01-intro-apache-spark.md"
       },
       {
+        "title": "Chapter 2: Spark Architecture",
+        "desc": "Error: This is now safe",
+        "order": 2,
+        "file": "02-Apache-Spark-Architecture.md"
+      },
+      {
         "title": "Chapter 6: Spark Dataframe operations",
         "desc": "Dataframes Tutorial",
         "order": 6,
