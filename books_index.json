@@ -1,6 +1,6 @@
 [
   {
-    "id": "test-guide",
+    "id": "apache-spark",
     "details": {
       "id": "apache-spark",
       "title": "Learn Apache Spark",
@@ -15,34 +15,10 @@
         "file": "01-intro-apache-spark.md"
       },
       {
-        "title": "Chapter 2: Spark Architecture",
-        "desc": "Error: This is now safe",
-        "order": 2,
-        "file": "02-Apache-Spark-Architecture.md"
-      },
-      {
-        "title": "Chapter 3: Pyspark Architecture",
-        "desc": "Understanding PySpark Architecture ",
-        "order": 3,
-        "file": "03_Pyspark_Architecture.md"
-      },
-      {
-        "title": "Chapter 4: Intoduction to dataframes",
-        "desc": "Understanding Spark dataframes",
-        "order": 4,
-        "file": "04-introduction-to-dataframes.md"
-      },
-      {
-        "title": "Chapter 5: Spark Session and Spark context",
-        "desc": "Understanding Spark Session and Spark context",
-        "order": 5,
-        "file": "05-spark-session-and-spark-context.md"
-      },
-      {
-        "title": "Chapter 1: Hello World",
-        "desc": "Error: This is now safe",
-        "order": 100,
-        "file": "01-hello.md"
+        "title": "Chapter 6: Spark Dataframe operations",
+        "desc": "Dataframes Tutorial",
+        "order": 6,
+        "file": "06-Spark-Dataframes-operations.md"
       }
     ]
   },
