@@ -27,6 +27,12 @@
         "file": "03_Pyspark_Architecture.md"
       },
       {
+        "title": "Chapter 4: Intoduction to dataframes",
+        "desc": "Understanding Spark dataframes",
+        "order": 4,
+        "file": "04-introduction-to-dataframes.md"
+      },
+      {
         "title": "Chapter 6: Spark Dataframe operations",
         "desc": "Dataframes Tutorial",
         "order": 6,
