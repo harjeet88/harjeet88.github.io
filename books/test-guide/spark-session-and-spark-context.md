@@ -1,3 +1,8 @@
+---
+title: "Chapter 5: Spark Session and Spark context"
+desc: "Understanding Spark Session and Spark context"
+order: 5
+---
 # Introduction to Spark Session and Spark Context
 
 Welcome to this chapter on the fundamentals of Apache Spark's entry points: Spark Session and Spark Context. If you're new to Spark or coming from an older version, understanding these components is crucial because they serve as the gateway to Spark's powerful distributed computing capabilities. In this tutorial, we'll break everything down step by step in simple terms, assuming you have basic knowledge of Python and data processing concepts. We'll use PySpark (Spark's Python API) for examples, as it's widely used and beginner-friendly.
