@@ -39,12 +39,6 @@
         "file": "05-spark-session-and-spark-context.md"
       },
       {
-        "title": "Chapter 6: Spark Dataframe operations",
-        "desc": "Dataframes Tutorial",
-        "order": 6,
-        "file": "06-Spark-Dataframes-operations.md"
-      },
-      {
         "title": "Chapter 1: Hello World",
         "desc": "Error: This is now safe",
         "order": 100,
