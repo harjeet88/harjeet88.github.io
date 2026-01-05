@@ -21,6 +21,12 @@
         "file": "02-Apache-Spark-Architecture.md"
       },
       {
+        "title": "Chapter 3: Pyspark Architecture",
+        "desc": "Understanding PySpark Architecture ",
+        "order": 3,
+        "file": "03_Pyspark_Architecture.md"
+      },
+      {
         "title": "Chapter 6: Spark Dataframe operations",
         "desc": "Dataframes Tutorial",
         "order": 6,
